@@ -1,0 +1,633 @@
+
+
+
+**********GET several posts and dispaly their respective score**********
+HTTP/1.1 200 OK
+Content-Length: 162
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "non", 
+    "date": "130509", 
+    "downvotes": 31, 
+    "id": 74, 
+    "score": 45, 
+    "upvotes": 76, 
+    "username": "Quisquam"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 163
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "adipisci", 
+    "date": "110218", 
+    "downvotes": 46, 
+    "id": 89, 
+    "score": 30, 
+    "upvotes": 76, 
+    "username": "Modi"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 172
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "etincidunt", 
+    "date": "020314", 
+    "downvotes": 53, 
+    "id": 56, 
+    "score": -47, 
+    "upvotes": 6, 
+    "username": "Consectetur"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 169
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "etincidunt", 
+    "date": "000407", 
+    "downvotes": 30, 
+    "id": 47, 
+    "score": -25, 
+    "upvotes": 5, 
+    "username": "Adipisci"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 164
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "adipisci", 
+    "date": "070101", 
+    "downvotes": 42, 
+    "id": 23, 
+    "score": 48, 
+    "upvotes": 90, 
+    "username": "Dolor"
+  }
+]
+HTTP/1.1 404 Not Found
+Content-Length: 83
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "message": "Not Found: http://localhost:5102/votes/id/200", 
+  "status": 404
+}
+HTTP/1.1 404 Not Found
+Content-Length: 85
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "message": "Not Found: http://localhost:5100/votes/id/error", 
+  "status": 404
+}
+
+
+
+**********GET votes for a community and limit the number fetched**********
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+Server: Caddy
+X-Content-Type-Options: nosniff
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Content-Length: 56
+
+404 Site 127.0.0.1:2015 is not served on this interface
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+Server: Caddy
+X-Content-Type-Options: nosniff
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Content-Length: 56
+
+404 Site 127.0.0.1:2015 is not served on this interface
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+Server: Caddy
+X-Content-Type-Options: nosniff
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Content-Length: 56
+
+404 Site 127.0.0.1:2015 is not served on this interface
+
+
+
+***************Filter votes by user-defined arguments***************
+HTTP/1.1 200 OK
+Content-Length: 480
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "est", 
+    "date": "050717", 
+    "downvotes": 4, 
+    "id": 9, 
+    "score": 65, 
+    "upvotes": 69, 
+    "username": "Consectetur"
+  }, 
+  {
+    "community": "est", 
+    "date": "070703", 
+    "downvotes": 8, 
+    "id": 87, 
+    "score": 50, 
+    "upvotes": 58, 
+    "username": "Dolorem"
+  }, 
+  {
+    "community": "est", 
+    "date": "131014", 
+    "downvotes": 34, 
+    "id": 22, 
+    "score": 11, 
+    "upvotes": 45, 
+    "username": "Dolorem"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 1138
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "adipisci", 
+    "date": "050123", 
+    "downvotes": 6, 
+    "id": 12, 
+    "score": 76, 
+    "upvotes": 82, 
+    "username": "Sed"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "070101", 
+    "downvotes": 42, 
+    "id": 23, 
+    "score": 48, 
+    "upvotes": 90, 
+    "username": "Dolor"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "100611", 
+    "downvotes": 41, 
+    "id": 0, 
+    "score": 45, 
+    "upvotes": 86, 
+    "username": "Dolor"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "110218", 
+    "downvotes": 46, 
+    "id": 89, 
+    "score": 30, 
+    "upvotes": 76, 
+    "username": "Modi"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "050128", 
+    "downvotes": 39, 
+    "id": 77, 
+    "score": 14, 
+    "upvotes": 53, 
+    "username": "Consectetur"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "151218", 
+    "downvotes": 13, 
+    "id": 51, 
+    "score": 6, 
+    "upvotes": 19, 
+    "username": "Quisquam"
+  }, 
+  {
+    "community": "adipisci", 
+    "date": "201214", 
+    "downvotes": 50, 
+    "id": 61, 
+    "score": -26, 
+    "upvotes": 24, 
+    "username": "Sit"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 162
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "eius", 
+    "date": "180512", 
+    "downvotes": 28, 
+    "id": 44, 
+    "score": 49, 
+    "upvotes": 77, 
+    "username": "Tempora"
+  }
+]
+
+
+
+**********Send upvote and downvote requests, and view their statuses**********
+HTTP/1.1 200 OK
+Content-Length: 112
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 53, 
+  "new score:": -46, 
+  "update status": 200, 
+  "upvotes": 7, 
+  "vote type": "upvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 114
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 54, 
+  "new score:": -47, 
+  "update status": 200, 
+  "upvotes": 7, 
+  "vote type": "downvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 114
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 55, 
+  "new score:": -48, 
+  "update status": 200, 
+  "upvotes": 7, 
+  "vote type": "downvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 112
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 42, 
+  "new score:": 49, 
+  "update status": 200, 
+  "upvotes": 91, 
+  "vote type": "upvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 114
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:06 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 31, 
+  "new score:": -26, 
+  "update status": 200, 
+  "upvotes": 5, 
+  "vote type": "downvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 112
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 46, 
+  "new score:": 31, 
+  "update status": 200, 
+  "upvotes": 77, 
+  "vote type": "upvote"
+}
+HTTP/1.1 200 OK
+Content-Length: 112
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+{
+  "downvotes": 31, 
+  "new score:": 46, 
+  "update status": 200, 
+  "upvotes": 77, 
+  "vote type": "upvote"
+}
+
+
+
+***************Votes for each post with their scores changed***************
+HTTP/1.1 200 OK
+Content-Length: 162
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "non", 
+    "date": "130509", 
+    "downvotes": 31, 
+    "id": 74, 
+    "score": 46, 
+    "upvotes": 77, 
+    "username": "Quisquam"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 163
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "adipisci", 
+    "date": "110218", 
+    "downvotes": 46, 
+    "id": 89, 
+    "score": 31, 
+    "upvotes": 77, 
+    "username": "Modi"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 172
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "etincidunt", 
+    "date": "020314", 
+    "downvotes": 55, 
+    "id": 56, 
+    "score": -48, 
+    "upvotes": 7, 
+    "username": "Consectetur"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 169
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "etincidunt", 
+    "date": "000407", 
+    "downvotes": 31, 
+    "id": 47, 
+    "score": -26, 
+    "upvotes": 5, 
+    "username": "Adipisci"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 164
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "community": "adipisci", 
+    "date": "070101", 
+    "downvotes": 42, 
+    "id": 23, 
+    "score": 49, 
+    "upvotes": 91, 
+    "username": "Dolor"
+  }
+]
+
+
+
+**********All downvotes and upvotes, each identified with a unique tracker id**********
+HTTP/1.1 200 OK
+Content-Length: 2148
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:07 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "id": 0, 
+    "post_id": 42, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 1, 
+    "post_id": 17, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 2, 
+    "post_id": 56, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 3, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 4, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 5, 
+    "post_id": 23, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 6, 
+    "post_id": 47, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 7, 
+    "post_id": 89, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 8, 
+    "post_id": 74, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 9, 
+    "post_id": 56, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 10, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 11, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 12, 
+    "post_id": 23, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 13, 
+    "post_id": 47, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 14, 
+    "post_id": 89, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 15, 
+    "post_id": 74, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 16, 
+    "post_id": 56, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 17, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 18, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 19, 
+    "post_id": 23, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 20, 
+    "post_id": 47, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 21, 
+    "post_id": 89, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 22, 
+    "post_id": 74, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 23, 
+    "post_id": 56, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 24, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 25, 
+    "post_id": 56, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 26, 
+    "post_id": 23, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 27, 
+    "post_id": 47, 
+    "vote_type": "downvote"
+  }, 
+  {
+    "id": 28, 
+    "post_id": 89, 
+    "vote_type": "upvote"
+  }, 
+  {
+    "id": 29, 
+    "post_id": 74, 
+    "vote_type": "upvote"
+  }
+]

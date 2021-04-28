@@ -1,0 +1,9 @@
+localhost {
+	proxy /votes localhost:5100 localhost:5101 localhost:5102 {
+		policy round_robin
+	}
+	proxy /posts localhost:5200 localhost:5201 localhost:5202 {
+		policy round_robin
+	}
+	log stdout
+}

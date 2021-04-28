@@ -1,0 +1,220 @@
+
+
+
+**********Creating new posts**********
+{
+  "Post Community: ": "Primitive web post", 
+  "Post Date": "03/03/2020", 
+  "Post ID: ": "50", 
+  "Post Text: ": "lets add more posts", 
+  "Post Title: ": "hello from the web1", 
+  "Post URL: ": "www.localdevice.com", 
+  "Post User Name: ": "web_user1"
+}
+{
+  "Post Community: ": "Primitive web post", 
+  "Post Date": "03/03/2020", 
+  "Post ID: ": "60", 
+  "Post Text: ": "lets add more posts", 
+  "Post Title: ": "hello from the web2", 
+  "Post URL: ": "www.localdevice.com", 
+  "Post User Name: ": "web_user1"
+}
+{
+  "Post Community: ": "Primitive web post", 
+  "Post Date": "03/03/2020", 
+  "Post ID: ": "70", 
+  "Post Text: ": "lets add more posts", 
+  "Post Title: ": "hello from the web3", 
+  "Post URL: ": "www.localdevice.com", 
+  "Post User Name: ": "web_user1"
+}
+{
+  "Post Community: ": "Primitive web post", 
+  "Post Date": "03/03/2020", 
+  "Post ID: ": "80", 
+  "Post Text: ": "lets add more posts", 
+  "Post Title: ": "hello from the web4", 
+  "Post URL: ": "www.localdevice.com", 
+  "Post User Name: ": "web_user1"
+}
+
+
+
+**********Testing Creating new posts**********
+{
+  "message: ": "Conflict: http://localhost:5202/posts/add_post", 
+  "status: ": 409
+}
+
+
+
+**********Deleting Post**********
+HTTP/1.1 200 OK
+Content-Length: 29
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:40 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_id": 1
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 29
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:40 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_id": 2
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 29
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:40 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_id": 3
+  }
+]
+
+
+
+**********Retrieve Post Given ID**********
+HTTP/1.1 200 OK
+Content-Length: 166
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:40 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 6, 
+    "post_title": "Burst Your Bubble", 
+    "post_user_name": "someone"
+  }
+]
+HTTP/1.1 200 OK
+Content-Length: 165
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:41 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 7, 
+    "post_title": "Under the Weather", 
+    "post_user_name": "senior"
+  }
+]
+
+
+
+***************List the 5 most recent posts to particular community***************
+HTTP/1.1 200 OK
+Content-Length: 812
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:41 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 6, 
+    "post_title": "Burst Your Bubble", 
+    "post_user_name": "someone"
+  }, 
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 7, 
+    "post_title": "Under the Weather", 
+    "post_user_name": "senior"
+  }, 
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 8, 
+    "post_title": "Up In Arms", 
+    "post_user_name": "randomgirl"
+  }, 
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 9, 
+    "post_title": "Down And Out", 
+    "post_user_name": "somewhere"
+  }, 
+  {
+    "post_community": "Math", 
+    "post_date": "03/03/2020", 
+    "post_id": 10, 
+    "post_title": "Close But No Cigar", 
+    "post_user_name": "jay"
+  }
+]
+
+
+
+***************List the 5 most recent posts to any community***************
+HTTP/1.1 200 OK
+Content-Length: 840
+Content-Type: application/json
+Date: Wed, 28 Apr 2021 17:59:41 GMT
+Server: Caddy
+Server: gunicorn/19.9.0
+
+[
+  {
+    "post_community": "Quills", 
+    "post_date": "03/08/2020", 
+    "post_id": 15, 
+    "post_title": "Between a Rock and a Hard Place", 
+    "post_user_name": "v"
+  }, 
+  {
+    "post_community": "Quills", 
+    "post_date": "03/07/2020", 
+    "post_id": 14, 
+    "post_title": "Flea Market", 
+    "post_user_name": "sills"
+  }, 
+  {
+    "post_community": "Quills", 
+    "post_date": "03/06/2020", 
+    "post_id": 13, 
+    "post_title": "Quality Time", 
+    "post_user_name": "randomgirl"
+  }, 
+  {
+    "post_community": "Quills", 
+    "post_date": "03/05/2020", 
+    "post_id": 12, 
+    "post_title": "Down For The Count", 
+    "post_user_name": "sills"
+  }, 
+  {
+    "post_community": "Science", 
+    "post_date": "03/05/2020", 
+    "post_id": 18, 
+    "post_title": "Dropping Like Flies", 
+    "post_user_name": "randomgirl"
+  }
+]
