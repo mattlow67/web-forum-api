@@ -44,6 +44,6 @@ Team
    >$ flask init
 
    and reconfigure the .env file using 
-   >$ FLASK_APP=<app>  
+   >$ FLASK_APP=\<app\>  
    >$ FLASK_ENV=development  
-   >$ flask run <or> $ flask init  
+   >$ flask run \<or\> $ flask init  
