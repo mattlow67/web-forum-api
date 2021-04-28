@@ -21,10 +21,10 @@ Team
 ## How to Run
 * **Note:** output from the terminal can be viewed in the txt files in the project folder
 1. Install Flask, Gunicorn, and Foreman, and Caddy
-   >https://palletsprojects.com/p/flask/
-   >https://docs.gunicorn.org/en/latest/install.html
-   >https://ddollar.github.io/foreman/
-   >https://github.com/caddyserver/caddy
+   >https://palletsprojects.com/p/flask/  
+   >https://docs.gunicorn.org/en/latest/install.html  
+   >https://ddollar.github.io/foreman/  
+   >https://github.com/caddyserver/caddy  
 2. Navigate to the folder containing the source files, and run the commands
    >$ flask init  
    >$ flask run  
