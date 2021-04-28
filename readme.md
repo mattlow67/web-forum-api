@@ -43,7 +43,7 @@ Team
    >$ export FLASK_APP=votes  
    >$ flask init
 
-and reconfigure the .env file using 
+   and reconfigure the .env file using 
    >$ FLASK_APP=<app>  
    >$ FLASK_ENV=development  
    >$ flask run <or> $ flask init  
