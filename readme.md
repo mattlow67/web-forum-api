@@ -5,6 +5,7 @@ This API has a posting microservice and a voting microservice, the latter of whi
 
 Using Flask and python’s sqlite3 library, HTTP requests are converted to SQL commands. For example,
 >curl -i -X PUT -d 'vote=upvote' http://localhost:2015/votes/id/56
+
 is converted to 
 >UPDATE posts SET upvotes=upvotes+1, score=score+1 WHERE id=56
 
@@ -15,33 +16,34 @@ Unlike in the development state wherein Flask is used to run and test code, the 
 Team
 - Developer 1: Jazmine Esqueda, Posting Microservice
 - Developer 2: Matthew Low, Voting Microservice
-- Operations: John Hernandez, Load Balancing
+- Operations: Johnathan Hernandez, Load Balancing
 
 ## How to Run
-- output from the terminal can be viewed in the txt files in the project folder
+* **Note:** output from the terminal can be viewed in the txt files in the project folder
 1. Install Flask, Gunicorn, and Foreman, and Caddy
->https://palletsprojects.com/p/flask/
->https://docs.gunicorn.org/en/latest/install.html
->https://ddollar.github.io/foreman/
->https://github.com/caddyserver/caddy
+   >https://palletsprojects.com/p/flask/
+   >https://docs.gunicorn.org/en/latest/install.html
+   >https://ddollar.github.io/foreman/
+   >https://github.com/caddyserver/caddy
 2. Navigate to the folder containing the source files, and run the commands
->$ flask init
->$ flask run
+   >$ flask init  
+   >$ flask run  
 **IMAGE GOES HERE**
 3. Open another terminal, and run
->$ foreman start -m caddy=1,votes=3,posts=3
+   >$ foreman start -m caddy=1,votes=3,posts=3  
 **IMAGE GOES HERE**
 4. Run the test scripts
->$ ./test_posts.sh
->$ ./test_votes.sh
+   >$ ./test_posts.sh  
+   >$ ./test_votes.sh  
 **IMAGE GOES HERE**
 5. Exit at any time using ctrl + c
 6. After the first successful run, you can reset the databases by using
->$ export FLASK_APP=posts
->$ flask init
->$ export FLASK_APP=votes
->$ flask init
+   >$ export FLASK_APP=posts  
+   >$ flask init  
+   >$ export FLASK_APP=votes  
+   >$ flask init
+
 and reconfigure the .env file using 
->$ FLASK_APP=<app>
->$ FLASK_ENV=development
->$ flask run <or> $ flask init
+   >$ FLASK_APP=<app>  
+   >$ FLASK_ENV=development  
+   >$ flask run <or> $ flask init  
